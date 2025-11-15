@@ -15,7 +15,7 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 export async function clientLoader() {
-  const res = await fetch("/data.yml");
+  const res = await fetch(`${import.meta.env.BASE_URL}data.yml`);
   const text = await res.text();
   const data = yaml.load(text) as Data;
   return data;
