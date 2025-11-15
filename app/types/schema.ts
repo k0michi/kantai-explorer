@@ -19,9 +19,32 @@ export type PlaceRef = z.infer<typeof PlaceRefSchema>;
 export const VesselTypeSchema = z.enum(["battleship"]);
 export type VesselType = z.infer<typeof VesselTypeSchema>;
 
+export const VesselEventTypeSchema = z.enum([
+  // 起工
+  "laid_down",
+  // 進水
+  "launched",
+  // 就役
+  "commissioned",
+  // 退役
+  "decommissioned",
+  // 沈没
+  "sunk",
+  // 除籍
+  "stricken",
+  // 出発
+  "departure",
+  // 到着
+  "arrival",
+  // 経由地
+  "waypoint",
+]);
+export type VesselEventType = z.infer<typeof VesselEventTypeSchema>;
+
 export const VesselEventSchema = z.object({
   name: z.string().optional(),
   date: z.string(),
+  type: VesselEventTypeSchema.optional(),
   place: PlaceRefSchema,
   references: z.string().array().optional(),
 });
