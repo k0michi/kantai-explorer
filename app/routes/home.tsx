@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import { useEffect, useMemo, useState, memo } from "react";
 import type { FC } from "react";
-import type { Data, Vessel, Place, Coordinate } from "../types/schema";
+import type { Data, Ship, Place, Coordinate } from "../types/schema";
 import { useLoaderData } from "react-router";
 import yaml from "js-yaml";
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from "react-leaflet";
@@ -41,8 +41,8 @@ class DataManager {
     }
   }
 
-  getVesselCoordinate(vessel: Vessel, time: number): Coordinate | null {
-    const eventsWithPlace = vessel.events.filter((ev) => {
+  getShipCoordinate(ship: Ship, time: number): Coordinate | null {
+    const eventsWithPlace = ship.events.filter((ev) => {
       return ev.place !== undefined;
     });
 
@@ -89,9 +89,9 @@ class DataManager {
       }
     }
 
-    for (const vesselKey in this.data.vessels) {
-      const vessel = this.data.vessels[vesselKey];
-      for (const ev of vessel.events) {
+    for (const shipKey in this.data.ships) {
+      const ship = this.data.ships[shipKey];
+      for (const ev of ship.events) {
         if (ev.date) {
           const date = new Date(ev.date);
           begin = Math.min(begin, date.getTime());
@@ -105,12 +105,12 @@ class DataManager {
 }
 
 function Map({ dataManager, time }: { dataManager: DataManager; time: number }) {
-  const vesselColors = [
+  const shipColors = [
     "blue", "red", "green", "orange", "purple", "brown", "pink", "gray", "cyan", "magenta"
   ];
-  const vesselTracks = Object.entries(dataManager.data.vessels)
-    .map(([key, vessel]) => {
-      let track = vessel.events
+  const shipTracks = Object.entries(dataManager.data.ships)
+    .map(([key, ship]) => {
+      let track = ship.events
         .filter(ev => new Date(ev.date).getTime() <= time && ev.place)
         .map(ev => {
           try {
@@ -120,15 +120,15 @@ function Map({ dataManager, time }: { dataManager: DataManager; time: number }) 
           }
         })
         .filter((coord): coord is Coordinate => Array.isArray(coord) && coord.length === 2);
-      return { name: vessel.name, track };
+      return { name: ship.name, track };
     });
-  const vesselMarkers = Object.entries(dataManager.data.vessels)
-    .map(([key, vessel]) => {
-      const coord = dataManager.getVesselCoordinate(vessel, time);
+  const shipMarkers = Object.entries(dataManager.data.ships)
+    .map(([key, ship]) => {
+      const coord = dataManager.getShipCoordinate(ship, time);
       if (!coord) return null;
       return (
         <Marker key={key} position={coord}>
-          <Popup>{vessel.name}</Popup>
+          <Popup>{ship.name}</Popup>
         </Marker>
       );
     })
@@ -145,10 +145,10 @@ function Map({ dataManager, time }: { dataManager: DataManager; time: number }) 
           <Popup>{place.name}</Popup>
         </Marker>
       ))}
-      {vesselMarkers}
-      {vesselTracks.map((v, i) => (
+      {shipMarkers}
+      {shipTracks.map((v, i) => (
         v.track.length > 1 ? (
-          <Polyline key={v.name} positions={v.track} color={vesselColors[i % vesselColors.length]} />
+          <Polyline key={v.name} positions={v.track} color={shipColors[i % shipColors.length]} />
         ) : null
       ))}
     </MapContainer>

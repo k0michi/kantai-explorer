@@ -16,10 +16,10 @@ export const PlaceRefSchema = z.union([
 ]);
 export type PlaceRef = z.infer<typeof PlaceRefSchema>;
 
-export const VesselTypeSchema = z.enum(["battleship"]);
-export type VesselType = z.infer<typeof VesselTypeSchema>;
+export const ShipTypeSchema = z.enum(["battleship"]);
+export type ShipType = z.infer<typeof ShipTypeSchema>;
 
-export const VesselEventTypeSchema = z.enum([
+export const ShipEventTypeSchema = z.enum([
   // 起工
   "laid_down",
   // 進水
@@ -39,24 +39,24 @@ export const VesselEventTypeSchema = z.enum([
   // 経由地
   "waypoint",
 ]);
-export type VesselEventType = z.infer<typeof VesselEventTypeSchema>;
+export type ShipEventType = z.infer<typeof ShipEventTypeSchema>;
 
-export const VesselEventSchema = z.object({
+export const ShipEventSchema = z.object({
   name: z.string().optional(),
   date: z.string(),
-  type: VesselEventTypeSchema.optional(),
+  type: ShipEventTypeSchema.optional(),
   place: PlaceRefSchema,
   references: z.string().array().optional(),
 });
-export type VesselEvent = z.infer<typeof VesselEventSchema>;
+export type ShipEvent = z.infer<typeof ShipEventSchema>;
 
-export const VesselSchema = z.object({
+export const ShipSchema = z.object({
   name: z.string(),
   affiliation: z.string(),
-  type: VesselTypeSchema,
-  events: VesselEventSchema.array(),
+  type: ShipTypeSchema,
+  events: ShipEventSchema.array(),
 });
-export type Vessel = z.infer<typeof VesselSchema>;
+export type Ship = z.infer<typeof ShipSchema>;
 
 export const EventSchema = z.object({
   name: z.string(),
@@ -70,7 +70,7 @@ export type Event = z.infer<typeof EventSchema>;
 
 export const DataSchema = z.object({
   places: z.record(z.string(), PlaceSchema),
-  vessels: z.record(z.string(), VesselSchema),
+  ships: z.record(z.string(), ShipSchema),
   events: EventSchema.array(),
 });
 export type Data = z.infer<typeof DataSchema>;

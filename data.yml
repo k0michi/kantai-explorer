@@ -54,7 +54,7 @@ places:
   mitajiri:
     name: 三田尻
     coordinate: [34.037774002746076, 131.58771920485339]
-vessels:
+ships:
   ijn_yamato:
     name: 大和
     affiliation: ijn
