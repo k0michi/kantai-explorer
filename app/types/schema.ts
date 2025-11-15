@@ -6,17 +6,21 @@ export type Place = {
   references?: string[];
 };
 
+export type PlaceRef = string | { coordinate: Coordinate; };
+
+export type VesselType = 'battleship';
+
 export type VesselEvent = {
   name?: string;
   date: string;
-  place: string | { coordinate: Coordinate };
+  place: PlaceRef;
   references?: string[];
 };
 
 export type Vessel = {
   name: string;
   affiliation: string;
-  type: string;
+  type: VesselType;
   events: VesselEvent[];
 };
 
@@ -25,7 +29,7 @@ export type Event = {
   date?: string;
   begin_date?: string;
   end_date?: string;
-  place: string | { coordinate: Coordinate; };
+  place: PlaceRef;
   references?: string[];
 };
 
