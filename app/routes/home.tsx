@@ -162,22 +162,22 @@ export default function Home() {
   const [currentTime, setCurrentTime] = useState(begin);
 
   return (
-    <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
-      <Map dataManager={dataManager} time={currentTime} />
-      <div style={{ position: "absolute", bottom: 10, left: 10, backgroundColor: "white", padding: "5px", zIndex: 1000, color: "black" }}>
-        <label>
+    <div style={{ width: "100vw", height: "100vh", display: "flex", flexDirection: "column" }}>
+      <div style={{ flex: 1, minHeight: 0 }}>
+        <Map dataManager={dataManager} time={currentTime} />
+      </div>
+      <div style={{ backgroundColor: "white", padding: "16px 0 12px 0", color: "black", width: "100%", position: "relative" }}>
+        <label style={{ display: "flex", alignItems: "center", gap: "1em", width: "100%", justifyContent: "center" }}>
           <input
             type="range"
             min={begin}
             max={end}
             value={currentTime}
             onChange={(e) => setCurrentTime(parseInt(e.target.value, 10))}
-            style={{ width: "300px" }}
+            style={{ width: "80vw", maxWidth: "900px" }}
           />
+          <span style={{ minWidth: "100px", textAlign: "center" }}>{new Date(currentTime).toISOString().split("T")[0]}</span>
         </label>
-        <div>
-          {new Date(currentTime).toISOString().split("T")[0]}
-        </div>
       </div>
     </div>
   );
