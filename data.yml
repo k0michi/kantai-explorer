@@ -114,6 +114,14 @@ vessels:
         place: hashirajima
         references:
           - "戦史叢書第043巻 ミッドウェー海戦 p276"
+      - date: 1942-08-10
+        place: hashirajima
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1942-08-17
+        place: kure
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
       - date: 1942-08-28
         place: truk_islands
         references:
@@ -137,6 +145,10 @@ vessels:
         place: truk_islands
         references:
           - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - date: 1943-10-17
+        place: truk_islands
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
       - date: 1943-10-19
         place: brown_atoll
         references:
