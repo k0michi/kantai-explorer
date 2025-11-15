@@ -47,7 +47,13 @@ places:
     coordinate: [26.267709909362384, 127.79041681742406]
   brunei:
     name: ブルネイ
-    coordinate: [4.4992787573848485, 114.64138024161916]
+    coordinate: [5.105077975149291, 115.29711100575958]
+  tokuyama:
+    name: 徳山
+    coordinate: [34.03485841498559, 131.8098201041067]
+  mitajiri:
+    name: 三田尻
+    coordinate: [34.037774002746076, 131.58771920485339]
 vessels:
   ijn_yamato:
     name: 大和
@@ -245,7 +251,163 @@ vessels:
         place: brunei
         references:
           - "戦史叢書第056巻 海軍捷号作戦＜2＞フィリピン沖海戦 p137"
-      # TODO
+      - date: 1944-10-22T12:45:00+09:00
+        place:
+          coordinate: [5.6, 114.71666666666667]
+        references:
+          - "戦史叢書第056巻 海軍捷号作戦＜2＞フィリピン沖海戦 p138"
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1740"
+      - date: 1944-10-22T16:15:00+09:00
+        place:
+          coordinate: [6.7433333333333334, 115.0]
+        references:
+          - "戦史叢書第056巻 海軍捷号作戦＜2＞フィリピン沖海戦 p138"
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1741"
+      - date: 1944-10-23T04:00:00+09:00
+        place:
+          coordinate: [8.8916666666666667, 116.925]
+        references:
+          - "戦史叢書第056巻 海軍捷号作戦＜2＞フィリピン沖海戦 p138"
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1742"
+      # - date: 1944-10-23T11:25:00+09:00
+      #   place:
+      #     coordinate: [10.4666666666666667, 118.9166666666666666]
+      #   references:
+      #     - "戦史叢書第056巻 海軍捷号作戦＜2＞フィリピン沖海戦 p138"
+      #     - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1745"
+      - date: 1944-10-23T16:29:00+09:00
+        place:
+          coordinate: [11.8666666666666667, 118.15]
+        references:
+          - "戦史叢書第056巻 海軍捷号作戦＜2＞フィリピン沖海戦 p138"
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1747"
+      - date: 1944-10-23T19:01:00+09:00
+        place:
+          coordinate: [12.43333333333333335, 118.6666666666666666]
+        references:
+          - "戦史叢書第056巻 海軍捷号作戦＜2＞フィリピン沖海戦 p138"
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1747"
+      - date: 1944-10-23T23:29:00+09:00
+        place:
+          coordinate: [13.1, 119.575]
+        references:
+          - "戦史叢書第056巻 海軍捷号作戦＜2＞フィリピン沖海戦 p138"
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1748"
+      - date: 1944-10-25T01:45:00+09:00
+        place:
+          coordinate: [12.75, 124.6833333333333333]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1757"
+      - date: 1944-10-25T06:40:00+09:00
+        place:
+          coordinate: [11.9, 125.8566666666666667]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1757"
+      - date: 1944-10-25T20:38:00+09:00
+        place:
+          coordinate: [12.83, 124.6833333333333333]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1770"
+      - date: 1944-10-27T03:00:00+09:00
+        place:
+          coordinate: [12.7166666666666667, 117.4666666666666667]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1778"
+      - date: 1944-10-27T08:32:00+09:00
+        place:
+          coordinate: [12.44166666666666665, 115.95]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1778"
+      - date: 1944-10-27T14:32:00+09:00
+        place:
+          coordinate: [12.1, 115.14166666666666666]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1778"
+      - date: 1944-10-27T14:45:00+09:00
+        place:
+          coordinate: [10.20833333333333334, 114.7833333333333333]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1779"
+      - date: 1944-10-27T22:00:00+09:00
+        place:
+          coordinate: [9.9166666666666666, 114.16666666666666666]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1779"
+      - date: 1944-10-28T01:50+09:00
+        place:
+          coordinate: [8.9166666666666666, 113.8]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1780"
+      - date: 1944-10-28T07:00:00+09:00
+        place:
+          coordinate: [7.9333333333333333, 112.6333333333333333]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1780"
+      - date: 1944-10-28T09:00:00+09:00
+        place:
+          coordinate: [7.31666666666666665, 112.6666666666666666]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1780"
+      - date: 1944-10-28T14:33:00+09:00
+        place:
+          coordinate: [6.18333333333333332, 113.75]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1781"
+      - date: 1944-10-28T17:58:00+09:00
+        place:
+          coordinate: [5.6, 114.43333333333333335]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1781"
+      #
+      - date: 1944-10-28T17:58:00+09:00
+        place:
+          coordinate: [5.6, 114.43333333333333335]
+        references:
+          - "昭和１９年１０月１７日～昭１９年１０月２８日 軍艦大和戦闘詳報 第３号（１） p1781"
+      - date: 1944-11-08
+        place: brunei
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      # Sortie to where?
+      - date: 1944-11-11
+        place: brunei
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - date: 1944-11-16
+        place: brunei
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-11-23
+        place: kure
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1945-03-28
+        place: tokuyama
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1945-03-29
+        place: kure
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1945-04-02T10:00:00+09:00
+        place: kure
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1945-04-06
+        place: mitajiri
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1945-04-06T15:20:00+09:00
+        place: tokuyama
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - name: 沈没
+        date: 1945-04-07T14:23:00+09:00
+        place:
+          coordinate: [30.721389, 128.066667]
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
 events:
   - name: 東京大空襲
     date: 1945-03-10
