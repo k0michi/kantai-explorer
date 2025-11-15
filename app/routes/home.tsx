@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, memo } from "react";
 import type { FC } from "react";
 import type { Data, Vessel, Place, Coordinate } from "../types/schema";
 import { useLoaderData } from "react-router";
@@ -155,11 +155,57 @@ function Map({ dataManager, time }: { dataManager: DataManager; time: number }) 
   );
 }
 
+const PlayPauseButton = memo(function PlayPauseButton({ playing, onClick }: { playing: boolean; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      style={{
+        fontSize: "1.2em",
+        padding: "0.2em 0.8em",
+        borderRadius: "0.2em",
+        border: "none",
+        background: "#dddddd",
+        cursor: "pointer",
+      }}
+      aria-label={playing ? "Stop" : "Play"}
+    >
+      {playing ? "■" : "▶"}
+    </button>
+  );
+});
+
+const kAutoPlaySpeed = 0.1 * 365 * 24 * 60 * 60; // [s/s]
+const kFramePerSecond = 30;
+const kDefaultTime = new Date("1941-12-08").getTime();
+
 export default function Home() {
   const data = useLoaderData<Data>();
   const dataManager = useMemo(() => new DataManager(data), [data]);
   const { begin, end } = dataManager.getBeginEndTime();
-  const [currentTime, setCurrentTime] = useState(begin);
+  const [currentTime, setCurrentTime] = useState(kDefaultTime);
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    if (!playing) return;
+    if (currentTime >= end) {
+      setPlaying(false);
+      return;
+    }
+    let lastTime = Date.now();
+    const tick = () => {
+      const now = Date.now();
+      const elapsed = (now - lastTime) / 1000;
+      lastTime = now;
+      console.log(elapsed, currentTime);
+      setCurrentTime((prev) => Math.min(prev + kAutoPlaySpeed * 1000 * elapsed, end));
+      if (playing && currentTime < end) {
+        timerId = setTimeout(tick, 1000 / kFramePerSecond);
+      }
+    };
+    let timerId = setTimeout(tick, 1000 / kFramePerSecond);
+    return () => clearTimeout(timerId);
+  }, [playing, currentTime, begin, end]);
 
   return (
     <div style={{ width: "100vw", height: "100vh", display: "flex", flexDirection: "column" }}>
@@ -167,7 +213,18 @@ export default function Home() {
         <Map dataManager={dataManager} time={currentTime} />
       </div>
       <div style={{ backgroundColor: "white", padding: "16px 0 12px 0", color: "black", width: "100%", position: "relative" }}>
-        <label style={{ display: "flex", alignItems: "center", gap: "1em", width: "100%", justifyContent: "center" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "1.5em", width: "100%", justifyContent: "center" }}>
+          <PlayPauseButton
+            playing={playing}
+            onClick={() => {
+              if (playing) {
+                setPlaying(false);
+              } else {
+                if (currentTime >= end) setCurrentTime(begin);
+                setPlaying(true);
+              }
+            }}
+          />
           <input
             type="range"
             min={begin}
@@ -177,7 +234,7 @@ export default function Home() {
             style={{ width: "80vw", maxWidth: "900px" }}
           />
           <span style={{ minWidth: "100px", textAlign: "center" }}>{new Date(currentTime).toISOString().split("T")[0]}</span>
-        </label>
+        </div>
       </div>
     </div>
   );
