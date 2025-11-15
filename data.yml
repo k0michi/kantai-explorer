@@ -1,0 +1,252 @@
+places:
+  kure:
+    name: 呉
+    coordinate: [34.23700376520175, 132.55218599664465]
+  tosa_bay:
+    name: 土佐湾
+    coordinate: [33.20932872243247, 133.4812128407135]
+  sukumo_bay:
+    name: 宿毛湾
+    coordinate: [32.84839168881192, 132.5829582727542]
+  suo-nada:
+    name: 周防灘
+    coordinate: [33.7991731449216, 131.36584078026982]
+  tokyo:
+    name: 東京
+    # Tokyo Station
+    coordinate: [35.681606373788824, 139.76703057991665]
+  hashirajima:
+    name: 柱島
+    coordinate: [34.019166474363495, 132.41597593638193]
+  truk_islands:
+    name: トラック諸島
+    coordinate: [7.389589655366961, 151.74227065703894]
+  brown_atoll:
+    name: ブラウン環礁
+    coordinate: [11.496747855675684, 162.1792525316328]
+  yokosuka:
+    name: 横須賀
+    coordinate: [35.292972016846164, 139.66118997326205]
+  iyo-nada:
+    name: 伊予灘
+    coordinate: [33.54516176178081, 132.0071457287082]
+  okinoshima:
+    name: 沖ノ島
+    coordinate: [34.245084913165755, 130.10569891589563]
+  manila:
+    name: マニラ
+    coordinate: [14.604872481131606, 120.94405281446832]
+  lingga:
+    name: リンガ
+    coordinate: [-0.17113720253160228, 104.62052829207579]
+  tawitawi:
+    name: タウイタウイ
+    coordinate: [5.206052513357409, 120.00402485663983]
+  nakagusuku:
+    name: 中城
+    coordinate: [26.267709909362384, 127.79041681742406]
+  brunei:
+    name: ブルネイ
+    coordinate: [4.4992787573848485, 114.64138024161916]
+vessels:
+  ijn_yamato:
+    name: 大和
+    affiliation: ijn
+    type: battleship
+    events:
+      - name: 起工
+        date: 1937-11-04
+        place: kure
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - name: 進水
+        date: 1940-08-08
+        place: kure
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - name: 試運航
+        date: 1941-10-18
+        place: tosa_bay
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - name: 公試
+        date: 1941-11-30
+        place: sukumo_bay
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - name: 主砲射撃試験
+        date: 1941-12-07
+        place: suo-nada
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - name: 就役
+        date: 1941-12-16
+        place: kure
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - name: 柱島を出撃
+        date: 1942-05-29T06:00:00+09:00
+        place: hashirajima
+        references:
+          - "戦史叢書第043巻 ミッドウェー海戦 p272"
+      - date: 1942-05-30
+        place: 
+          coordinate: [28.75, 140]
+        references:
+          - "戦史叢書第043巻 ミッドウェー海戦 p272"
+      - date: 1942-06-02
+        place:
+          coordinate: [32, 155]
+        references:
+          - "戦史叢書第043巻 ミッドウェー海戦 p274"
+      - date: 1942-06-04T05:00:00+09:00
+        place:
+          coordinate: [35, 165]
+        references:
+          - "戦史叢書第043巻 ミッドウェー海戦 p276"
+      - date: 1942-06-14T19:00:00+09:00
+        place: hashirajima
+        references:
+          - "戦史叢書第043巻 ミッドウェー海戦 p276"
+      - date: 1942-08-28
+        place: truk_islands
+        references:
+          - "戦史叢書第062巻 中部太平洋方面海軍作戦＜2＞昭和十七年六月以降 p155"
+          - "http://www.combinedfleet.com/yamato.htm"
+      - name: 内地回航
+        date: 1943-05-08
+        place: truk_islands
+        references:
+          - "戦史叢書第062巻 中部太平洋方面海軍作戦＜2＞昭和十七年六月以降 p328"
+      - date: 1943-05-13
+        place: kure
+        references:
+          - "戦史叢書第062巻 中部太平洋方面海軍作戦＜2＞昭和十七年六月以降 p328"
+      - name: 呉を出撃
+        date: 1943-08-16
+        place: kure
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - date: 1943-08-23
+        place: truk_islands
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - date: 1943-10-19
+        place: brown_atoll
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1943-10-23
+        place: brown_atoll
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1943-10-26
+        place: truk_islands
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1943-12-12
+        place: truk_islands
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1943-12-17
+        place: yokosuka
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1943-12-20
+        place: yokosuka
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      # - name: 被雷
+      #   date: 1943-12-25
+      #   place:
+      #     type: relative
+      #     from: truk_islands
+      #     direction: north_east
+      #     distance: 277.8
+      #   references:
+      #     - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1943-12-25
+        place: truk_islands
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-01-15 # 1944-01-16?
+        place: kure
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - date: 1944-04-11
+        place: iyo-nada
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-04-17
+        place: kure
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-04-21
+        place: kure
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-04-22
+        place: okinoshima
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-04-26
+        place: manila
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - date: 1944-04-29
+        place: manila
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - date: 1944-05-01
+        place: lingga
+        references:
+          - "https://ja.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%92%8C_(%E6%88%A6%E8%89%A6)&oldid=106699849"
+      - date: 1944-05-11
+        place: lingga
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-05-14
+        place: tawitawi
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-06-22
+        place: nakagusuku
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-06-24
+        place: hashirajima
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-07-08
+        place: kure
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+      - date: 1944-07-10
+        place: nakagusuku
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+          - "https://www7a.biglobe.ne.jp/~kure_chin/data/dock/bb/yamato.html"
+      - date: 1944-07-16 # 1944-07-17?
+        place: lingga
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+          - "https://www7a.biglobe.ne.jp/~kure_chin/data/dock/bb/yamato.html"
+      - date: 1944-10-18
+        place: lingga
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+          - "https://www7a.biglobe.ne.jp/~kure_chin/data/dock/bb/yamato.html"
+      - date: 1944-10-20
+        place: brunei
+        references:
+          - "http://www.combinedfleet.com/yamato.htm"
+          - "https://www7a.biglobe.ne.jp/~kure_chin/data/dock/bb/yamato.html"
+      - name: ブルネイを出撃
+        date: 1944-10-22T08:00:00+09:00
+        place: brunei
+        references:
+          - "戦史叢書第056巻 海軍捷号作戦＜2＞フィリピン沖海戦 p137"
+      # TODO
+events:
+  - name: 東京大空襲
+    date: 1945-03-10
+    place: tokyo
